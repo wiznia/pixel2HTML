@@ -1,0 +1,116 @@
+.footer {
+	background-color: #545e6b;
+	padding: 3.75rem;
+	@include at-breakpoint("mobile-landscape") {
+		padding: 2rem;
+	}
+}
+
+.footer-inner {
+	overflow: hidden;
+}
+
+.footer__logo {
+	width: 32%;
+	@include at-breakpoint("mobile-landscape") {
+		text-align: center;
+	}
+	img {
+		float: left;
+		margin-right: 1.875rem;
+		@include at-breakpoint("desktop-medium") {
+			margin-bottom: 3.125rem;
+		}
+		@include at-breakpoint("mobile-landscape") {
+			float: none;
+			margin: 0 auto 1.25rem;
+			display: block;
+		}
+	}
+}
+.footer__logo-description {
+	color: rgba(255, 255, 255, .6);
+	line-height: 1.56;
+}
+
+.footer__help {
+	width: 52%;
+	padding: 0 8.125rem 0 6.125rem;
+	@include at-breakpoint("desktop-medium") {
+		padding: 0 3.125rem 0 4.125rem;
+	}
+	@include at-breakpoint("tablet-landscape") {
+		padding: 0;
+		margin-bottom: 1.25rem;
+	}
+	@include at-breakpoint("mobile-landscape") {
+		margin: 1.25rem 0;
+	}
+}
+.footer__help-list {
+	float: left;
+	width: 33.33%;
+	@include at-breakpoint("mobile-landscape") {
+		float: none;
+		width: 100%;
+		margin-bottom: 2.5rem;
+	}
+}
+.footer__help-list-item {
+	color: rgba(255, 255, 255, .6);
+	margin-bottom: 1rem;
+	a {
+		color: inherit;
+	}
+}
+.footer__help-list-item_title {
+	font-size: 1.125rem;
+	font-weight: 500;
+	color: #fff;
+	margin-bottom: 1.3125rem;
+}
+
+.footer__lang-selector {
+	width: 16%;
+	svg {
+		fill: #7f8c97;
+		vertical-align: middle;
+	}
+}
+.footer__lang-selector-list {
+	color: rgba(255, 255, 255, .6);
+	display: inline-block;
+	vertical-align: top;
+	margin-left: .25rem;
+	max-height: 1.25rem;
+	overflow: hidden;
+	transition: max-height 500ms ease;
+	&.active {
+		max-height: 3.25rem;
+	}
+}
+.footer__lang-item {
+	position: relative;
+	padding-right: .9375rem;
+	cursor: pointer;
+	margin-bottom: .3125rem;
+	&:first-child {
+		&:after {
+			content: '';
+			border-left: .25rem solid transparent;
+			border-right: .25rem solid transparent;
+			border-top: .25rem solid $lightGray;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			transform: translateY(-50%);
+		}
+	}
+}
+
+.footer__logo, .footer__help, .footer__lang-selector {
+	float: left;
+	@include at-breakpoint("tablet-landscape") {
+		width: 100%;
+	}
+}

@@ -1,0 +1,99 @@
+body {
+  background: #fff;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden; /* 100vw accounts for the scrollbar so if there's a scrollbar on the page it creates a horizontal scroll on the page, this prevents it */
+}
+
+img {
+	max-width: 100%;
+}
+
+.svg-defs {
+	display: none;
+}
+
+.container {
+	padding-top: 6.25rem;
+}
+
+.centered {
+	width: 71.25rem;
+	margin: auto;
+	@include at-breakpoint("desktop-medium") {
+		width: 90%;
+	}
+	@include at-breakpoint("mobile-landscape") {
+		width: 80%;
+	}
+}
+
+.full-width {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
+.main-title {
+	font-size: 3.25rem;
+	font-weight: 300;
+	line-height: 1.1;
+	letter-spacing: -.13rem;
+	color: $darkGray;
+	margin-bottom: 1.25rem;
+	@include at-breakpoint("tablet-landscape") {
+		font-size: 2.5rem;
+	}
+	@include at-breakpoint("tablet-portrait") {
+		font-size: 1.875rem;
+	}
+}
+.main-title_light {
+	color: #fff;
+}
+
+.main-excerpt {
+	font-size: 1.375rem;
+	font-weight: 300;
+	line-height: 1.45;
+	color: $mediumGray;
+	max-width: 40.625rem;
+	margin: auto;
+	@include at-breakpoint("tablet-landscape") {
+		font-size: 1.125rem;
+	}
+	@include at-breakpoint("tablet-portrait") {
+		font-size: .75rem;	
+	}
+}
+.main-excerpt_light {
+	margin-bottom: 2.9375rem;
+	color: rgba(255, 255, 255, .8);
+}
+
+.button {
+	cursor: pointer;
+	width: 100%;
+	background-color: transparent;
+	border: .125rem solid #e1e8ee;
+	border-radius: .3125rem;
+	padding: .625rem 0;
+	font: 500 1rem/1 'Roboto', sans-serif;
+	text-align: center;
+	color: $blue;
+}
+
+.button_short {
+	width: 11.25rem;
+	padding: 1.25rem 0;
+}
+
+.button_highlight {
+	border: .125rem solid $green;
+	background-color: $green;
+	color: #fff;
+}

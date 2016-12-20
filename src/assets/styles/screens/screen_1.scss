@@ -1,0 +1,335 @@
+.main {
+	text-align: center;
+}
+
+.featured {
+	padding: 7rem 0 12.5rem;
+	@include at-breakpoint("tablet-landscape") {
+		padding: 4rem 0 5.5rem;
+	}
+	.main-excerpt {
+		margin-bottom: 4.6875rem;
+		@include at-breakpoint("tablet-portrait") {
+			margin-bottom: 2.6875rem;
+		}
+	}
+}
+
+.featured__work {
+	margin-top: 4.0625rem;
+}
+.featured__work-item {
+	float: left;
+	width: 33.33%;
+	text-align: left;
+	padding-left: 3.75rem;
+	@include at-breakpoint("tablet-landscape") {
+		width: 100%;
+		float: none;
+		padding: 0;
+		margin-top: 3.75rem;
+	}
+	&:first-child {
+		padding-left: .9375rem;
+		@include at-breakpoint("desktop-medium") {
+			padding: 0;
+			margin: 0;
+		}
+	}
+	svg {
+		float: left;
+		margin-right: 1.875rem;
+		@include at-breakpoint("tablet-landscape") {
+			margin-right: .875rem;
+		}
+	}
+}
+.featured__work-info {
+	padding-left: 5.75rem;
+	@include at-breakpoint("tablet-landscape") {
+		padding-left: 4.125rem;
+	}
+}
+.featured__work-item-title {
+	font-size: 1.125rem;
+	font-weight: 400;
+	color: $darkGray;
+	@include at-breakpoint("tablet-landscape") {
+		font-size: 1rem;
+	}
+}
+.featured__work-item-description {
+	font-size: 1rem;
+	color: $lightGray;
+	line-height: 1.56;
+	margin-top: .625rem;
+	@include at-breakpoint("tablet-landscape") {
+		font-size: .875rem;
+	}
+}
+
+.carousel__container {
+	overflow: hidden;
+	text-align: left;
+	position: relative;
+	@include at-breakpoint("tablet-portrait") {
+		padding-bottom: 1.875rem;
+	}
+	img {
+		float: left;
+		@include at-breakpoint("tablet-landscape") {
+			max-width: 25rem;
+		}
+		@include at-breakpoint("tablet-portrait") {
+			max-width: none;
+			width: 100%;
+			float: none;	
+		}
+	}
+}
+.carousel__nav {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+	width: 71.25rem;
+	margin: -1.625rem auto 0;
+	text-align: right;
+	fill: $lightGray;
+	@include at-breakpoint("desktop-medium") {
+		right: 3.125rem;
+	}
+	@include at-breakpoint("tablet-portrait") {
+		display: none;
+	}
+}
+.carousel__outer {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	max-width: 21.875rem;
+	margin-left: 11.875rem;
+	transform: translate(-50%, -50%);
+	@include at-breakpoint("desktop-medium") {
+		margin-left: 15.875rem;
+	}
+	@include at-breakpoint("tablet-landscape") {
+		margin-left: 9.875rem;
+		max-width: 17.875rem;
+	}
+	@include at-breakpoint("tablet-portrait") {
+		margin-left: 0;
+		max-width: 90%;
+		margin: auto;
+		text-align: center;
+		position: static;
+		top: auto;
+		left: auto;
+		transform: none;
+	}
+}
+.carousel__container-title {
+	font-size: 2rem;
+	font-weight: 300;
+	color: $darkGray;
+	margin-bottom: 1.25rem;
+}
+.carousel__container-description {
+	color: $lightGray;
+	margin-bottom: 1.5625rem;
+}
+.carousel__container-learnmore {
+	font-weight: 500;
+	color: $blue;
+	margin-bottom: 2.1875rem;
+	display: block;
+	svg {
+		fill: currentColor;
+		vertical-align: middle;
+		margin-left: .4375rem;
+	}
+}
+
+/* Override styles for owl carousel */
+.owl-theme {
+	.owl-controls {
+		text-align: left;
+		margin-left: -.3125rem;
+		@include at-breakpoint("tablet-portrait") {
+			text-align: center;
+			margin-left: 0;
+		}
+	}
+	.owl-dots {
+		.owl-dot {
+			vertical-align: middle;
+			&.active {
+				span {
+					background: $blue;
+					width: .625rem;
+					height: .625rem;
+				}
+			}
+			span {
+				background: #e7e9ec;
+				width: .375rem;
+				height: .375rem;
+			}
+		}
+	}
+}
+
+.price-table {
+	background-image: linear-gradient(to bottom, #F9F9F9, #f9f9f9 87%, $mediumGray 87%, $mediumGray 100%);
+	padding-top: 7rem;
+	position: relative;
+	z-index: 10;
+	@include at-breakpoint("tablet-landscape") {
+		padding-top: 4rem;
+	}
+}
+.price-table__list {
+	overflow: hidden;
+	box-shadow: .125rem .125rem .1875rem 0 rgba(0, 0, 0, .15);
+	border-radius: .625rem;
+	margin-top: 5.375rem;
+	@include at-breakpoint("tablet-landscape") {
+		margin-top: 2.375rem;
+	}
+}
+.price-table__item {
+	background-color: #fff;
+	width: 33.33%;
+	float: left;
+	padding: 1.875rem;
+	@include at-breakpoint("tablet-landscape") {
+		padding: 1.25rem;
+		width: 100%;
+		float: none;
+		border-top: 1px solid #e0e0e0;
+	}
+	&:first-child {
+		border-right: 1px solid #f4f4f4;
+		@include at-breakpoint("desktop-medium") {
+			border-top: 0;
+		}
+	}
+}
+.price-table__item_highlight {
+	background-color: #39add1;
+	.price-table__item-category, .price-box__fee {
+		color: rgba(255, 255, 255, .7);
+	}
+	.price-table__item-description, .price-box__description {
+		color: rgba(255, 255, 255, .6);
+	}
+	.price-box {
+		border-top-color: rgba(255, 255, 255, .2);
+		border-bottom-color: rgba(255, 255, 255, .2); 
+	}
+	.price-box__price, .price-features__item {
+		color: #fff;
+	}
+}
+.price-table__item-category {
+	font-size: .875rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	color: $blue;
+}
+.price-table__item-description {
+	color: $lightGray;
+	margin: .1875rem 0 1.75rem;
+}
+.price-box {
+	border-top: 1px solid #e1e8ee;
+	border-bottom: 1px solid #e1e8ee;
+	padding: 1.4375rem 0;
+}
+.price-box__price {
+	font-size: 3.25rem;
+	font-weight: 300;
+	color: $darkGray;
+	@include at-breakpoint("desktop-medium") {
+		font-size: 3rem;
+	}
+}
+.price-box__fee {
+	font-size: .875rem;
+	color: $lightGray;
+}
+.price-box__description {
+	margin-top: 1.6875rem;
+	line-height: 1.56;
+	color: $lightGray;
+	@include at-breakpoint("desktop-medium") {
+		font-size: .8125rem;
+	}
+}
+.price-features {
+	padding: 1.875rem 0;
+	text-align: left;
+}
+.price-features__item {
+	font-size: .875rem;
+	color: $mediumGray;
+	margin-bottom: 2.1875rem;
+	svg {
+		fill: $green;
+		margin-right: .875rem;
+	}
+}
+.price-features__item_disabled {
+	color: #bfc7ce;
+	svg {
+		visibility: hidden;
+	}
+}
+
+.testimonials {
+	background-color: $mediumGray;
+	padding: 8.75rem 0 6.6875rem;
+	@include at-breakpoint("desktop-medium") {
+		padding: 4.75rem 0 2.6875rem;
+	}
+	@include at-breakpoint("tablet-portrait") {
+		padding-left: 1.875rem;
+		padding-right: 1.875rem;
+	}
+}
+.testimonials__sponsors {
+	margin-top: 4.8125rem;
+}
+.testimonials__sponsors-title {
+	font-size: 1.125rem;
+	font-weight: 500;
+	color: rgba(255, 255, 255, .6);
+	margin-bottom: 2.1875rem;
+}
+.testimonials__list {
+	@include at-breakpoint("tablet-landscape") {
+		max-width: 90%;
+		margin: auto;
+	}
+}
+.testimonials__item {
+	display: inline-block;
+	margin-left: 2.9375rem;
+	&:first-child {
+		margin: 0;
+	}
+	@include at-breakpoint("desktop-medium") {
+		margin-bottom: 1.875rem;
+	}
+	@include at-breakpoint("mobile-landscape") {
+		display: block;
+		margin-left: 0;
+		&:first-child {
+			margin-bottom: 1.875rem;
+		}
+	}
+	svg {
+		fill: #7e8792;
+	}
+}
